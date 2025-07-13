@@ -1,0 +1,17 @@
+---
+- name: Add YUM repositories
+  ansible.builtin.yum_repository:
+    name: "{{ item.name }}"
+    file: "{{ item.file }}"
+    baseurl: "{{ item.baseUrl }}"
+    description: "{{ item.description }}"
+    enabled: true
+    gpgcheck: true
+    gpgkey: "{{ item.gpg }}"
+  loop: "{{ yum_repositories }}"
+  register: repo_result
+
+- name: Update essential packages
+  ansible.builtin.package:
+    name: "{{ yum_packages }}"
+    state: latest

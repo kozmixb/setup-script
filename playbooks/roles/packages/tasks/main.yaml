@@ -1,4 +1,4 @@
 ---
 - name: Package management
-  ansible.builtin.include_tasks:
-  - yum.yaml
+  ansible.builtin.include_tasks: yum.yaml
+

@@ -1,10 +1,26 @@
 ---
 yum_repositories:
 - baseUrl: https://packages.microsoft.com/yumrepos/vscode
-  name: vscode.repo
-  description: code
-#  - baseUrl: https://downloads.k8slens.dev/rpm/packages
-#  - https://download.docker.com/linux/fedora/$releasever/
+  file: ansible-vscode
+  name: code
+  description: Visual Studio Code
+  gpg: https://packages.microsoft.com/keys/microsoft.asc
+- baseUrl: https://downloads.k8slens.dev/rpm/packages
+  name: lens-repo
+  file: ansible-lens
+  description: Lens Repo
+  gpg: https://downloads.k8slens.dev/keys/gpg
+- baseUrl: https://download.docker.com/linux/fedora/$releasever/source/stable
+  name: docker-ce-stable-source
+  file: ansible-docker
+  description: Docker CE Stable - Sources
+  gpg: https://download.docker.com/linux/fedora/gpg
+- baseUrl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
+  name: docker-ce-stable
+  file: ansible-docker
+  description: Docker CE Stable - $basearch
+  gpg: https://download.docker.com/linux/fedora/gpg
+
 
 yum_packages:
 - dnf-plugins-core
@@ -12,7 +28,7 @@ yum_packages:
 - samba-client
 - samba-common
 - cifs-utils
-- vscode
+- code
 - lutris
 - lens
 - docker-ce
