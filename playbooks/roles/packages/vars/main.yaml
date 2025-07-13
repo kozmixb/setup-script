@@ -1,0 +1,22 @@
+---
+yum_repositories:
+- baseUrl: https://packages.microsoft.com/yumrepos/vscode
+  name: vscode.repo
+  description: code
+#  - baseUrl: https://downloads.k8slens.dev/rpm/packages
+#  - https://download.docker.com/linux/fedora/$releasever/
+
+yum_packages:
+- dnf-plugins-core
+- steam
+- samba-client
+- samba-common
+- cifs-utils
+- vscode
+- lutris
+- lens
+- docker-ce
+- docker-ce-cli 
+- containerd.io 
+- docker-buildx-plugin 
+- docker-compose-plugin
