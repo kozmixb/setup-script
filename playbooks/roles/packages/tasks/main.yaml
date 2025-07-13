@@ -2,3 +2,6 @@
 - name: Package management
   ansible.builtin.include_tasks: yum.yaml
 
+- name: Flatpak packages
+  ansible.builtin.include_tasks: flatpak.yaml
+

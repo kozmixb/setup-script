@@ -1,0 +1,6 @@
+---
+- name: Install the flatpak package
+  community.general.flatpak:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ flatpaks }}"

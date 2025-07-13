@@ -36,3 +36,8 @@ yum_packages:
 - containerd.io 
 - docker-buildx-plugin 
 - docker-compose-plugin
+
+flatpaks:
+- org.keepassxc.KeePassXC
+- com.usebottles.bottles
+- com.discordapp.Discord
