@@ -1,0 +1,8 @@
+# Editor files for those working on multiple tools
+/.vscode
+/.idea
+
+# OS trash
+*.log
+.DS_Store
+Thumbs.db
